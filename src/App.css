@@ -1,130 +1,129 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+a:hover {
+  color: #535bf2;
 }
 
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-nav {
-  background-color: #333;
-  padding: 1em;
-  text-align: center;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin-right: 1em;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav ul li a:hover {
-  color: #ffdd57;
-}
-
-h1 {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.projects {
   display: flex;
-  justify-content: space-around;
-  margin: 20px;
+  flex-direction: column;
+  /* Ensure a column layout */
+  min-width: 320px;
+  min-height: 100vh;
 }
 
-.project-card {
-  border: 1px solid #ccc;
-  padding: 20px;
-  width: 300px;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.project-card img {
-  max-width: 100%;
-}
-
-form {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-form input,
-form textarea {
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  /* Space out navbar items */
+  align-items: center;
+  /* Center vertically */
+  padding: 1rem 2rem;
+  /* Add some padding */
   width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-}
-
-form button {
-  padding: 10px 20px;
+  /* Full width */
   background-color: #333;
+  /* Navbar background */
   color: white;
-  border: none;
-  cursor: pointer;
+  height: 60px;
+  /* Fixed height for consistent navbar size */
+  position: fixed;
+  /* Fix the navbar at the top */
+  top: 0;
+  /* Align to the top */
+  z-index: 1000;
+  /* Make sure it's above other elements */
 }
 
-form button:hover {
-  background-color: #ffdd57;
+/* Content Container */
+.container {
+  margin-top: 60px;
+  /* Space for the fixed navbar */
+  padding: 20px;
+  /* Add padding to the container */
+  width: 100%;
+  /* Full width */
+  flex: 1;
+  /* Allow the content to grow and fill remaining space */
+}
+
+/* Headings */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  text-align: center;
+  /* Center the title */
+}
+
+/* Button Styling */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    /* Stack navbar items vertically */
+    align-items: flex-start;
+    /* Align to start */
+  }
+
+  .navbar a {
+    margin-bottom: 1rem;
+    /* Space between links */
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
 }
