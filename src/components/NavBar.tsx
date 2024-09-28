@@ -1,34 +1,31 @@
-import React, { useState } from 'react';
 import './Navbar.css';
-import IoTLogo from './IoT.png';
+import IoTLogo from './IoT.png'; import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './NavBar.css';
 
-
-const Navbar: React.FC = () => {
+const NavBar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggleMenu = () => {
+    const toggleNav = () => {
         setIsOpen(!isOpen);
     };
 
     return (
         <nav className="navbar">
-            <div className="nav-left">
-                <img src={IoTLogo} alt="IoT Logo" className="logo" />
-                <button className="hamburger" onClick={toggleMenu}>
-                    &#9776; {/* Hamburger icon */}
-                </button>
-            </div>
-            <div className="nav-center">
-                <h1>IOT</h1>
-            </div>
-            <div className={`nav-right ${isOpen ? 'active' : ''}`}>
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-                <a href="#social">Social</a>
+            <div className="logo">IoT Club</div>
+            <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/projects">Projects</Link></li>
+                <li><Link to="/workshops">Workshops</Link></li>
+                <li><Link to="/contact">Contact Us</Link></li>
+            </ul>
+            <div className="burger" onClick={toggleNav}>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
         </nav>
     );
 };
 
-export default Navbar;
+export default NavBar;
