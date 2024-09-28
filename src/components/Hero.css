@@ -1,0 +1,143 @@
+.hero {
+    display: flex;
+    align-items: center;
+    /* Center vertically */
+    padding: 20px;
+    background-color: #282c34;
+    /* Background color */
+    color: white;
+    /* Text color */
+    height: 100vh;
+    /* Full height */
+}
+
+/* Styling for the IoT logo image */
+.hero-image {
+    width: 40%;
+    /* Set width for larger screens */
+    transition: transform 0.1s;
+    /* Smooth rotation effect */
+}
+
+.hero-image img {
+    width: 80%;
+    max-width: 100%;
+    /* Responsive image */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+/* Hero text and carousel wrapper */
+.hero-text-carousel {
+    display: flex;
+    flex-direction: column;
+    /* Stack text and carousel vertically */
+    width: 60%;
+    /* Set width for larger screens */
+    padding-left: 20px;
+    /* Space between image and text */
+}
+
+/* Hero text styling */
+.hero-text {
+    margin-bottom: 20px;
+    /* Space between hero text and carousel */
+}
+
+/* Carousel container styling */
+.carousel-container {
+    width: 100%;
+    /* Full width */
+    display: flex;
+    justify-content: center;
+    /* Center carousel */
+}
+
+.carousel {
+    width: 60%;
+    /* Full width */
+    height: 250px;
+    /* Set a height for the carousel */
+    background-color: #444;
+    /* Background color of carousel */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    /* Text color */
+    border-radius: 8px;
+    /* Rounded corners */
+}
+
+.intro-text h1 {
+    font-size: 2.5rem;
+    /* Adjust the size */
+    color: #1cc4cf;
+    /* Change the text color */
+    font-family: 'Courier New', Courier, monospace;
+    /* Change the font */
+    display: flex;
+    /* Allows the cursor to align correctly */
+    align-items: center;
+    /* Centers the cursor vertically */
+}
+
+.intro-text h1 span {
+    color: #007bff;
+    /* Color of the typing text (you can choose a different color) */
+    font-weight: bold;
+    /* Make it bold */
+}
+
+.intro-text h1 .typewriter {
+    border-right: 2px solid #91ff00;
+    /* Customize the cursor style */
+    animation: blink 0.75s step-end infinite;
+    /* Blinking effect for the cursor */
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+        /* Make cursor invisible halfway */
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        /* Stack elements on mobile */
+        align-items: center;
+        /* Center all elements */
+    }
+
+    .hero-image {
+        width: 50%;
+        /* Increase width for mobile */
+        order: 1;
+        /* Make it the first item */
+        margin-bottom: 20px;
+        /* Space between image and text */
+    }
+
+    .hero-text-carousel {
+        width: 100%;
+        /* Full width for mobile */
+        align-items: center;
+        /* Center content */
+        order: 2;
+        /* Make it the second item */
+    }
+
+    .hero-text {
+        text-align: center;
+        /* Center text */
+    }
+
+    .carousel-container {
+        order: 3;
+        /* Make carousel the last item */
+    }
+}

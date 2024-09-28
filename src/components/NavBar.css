@@ -1,88 +1,102 @@
-/* NavBar.css */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-}
-
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    /* Full width */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.8rem 2rem;
-    /* Reduced padding for height */
-    background-color: #333;
-    z-index: 1000;
-}
-
-.logo {
+    padding: 10px 20px;
+    background-color: #282c34;
+    /* Choose your background color */
     color: white;
-    font-size: 1.4rem;
-    font-weight: bold;
+    /* Text color */
 }
 
-.nav-links {
-    list-style: none;
+.nav-left,
+.nav-right {
     display: flex;
-    gap: 1.5rem;
-    /* Adjusted gap for better spacing */
+    align-items: center;
 }
 
-.nav-links a {
-    text-decoration: none;
+/* Logo image */
+.logo {
+    width: 40px;
+    /* Adjust size as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-right: 10px;
+    /* Space between logo and hamburger */
+}
+
+.hamburger {
+    font-size: 24px;
+    /* Size of hamburger icon */
+    background: none;
+    /* Remove button background */
+    border: none;
+    /* Remove button border */
     color: white;
-    font-size: 1rem;
-    /* Slightly smaller font size */
-    transition: color 0.3s ease-in-out;
-}
-
-.nav-links a:hover {
-    color: #ffdd57;
-}
-
-.burger {
-    display: none;
+    /* Hamburger color */
     cursor: pointer;
+    /* Pointer cursor on hover */
 }
 
-.burger div {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 5px;
-    transition: all 0.3s ease;
+/* Center item for IOT */
+.nav-center {
+    flex-grow: 1;
+    /* Center item will grow */
+    text-align: center;
+    /* Center the text */
 }
 
-/* Responsive design for mobile */
+/* Right side links */
+.nav-right {
+    display: flex;
+    gap: 20px;
+    /* Space between links */
+}
+
+/* Style for links */
+.nav-right a {
+    color: white;
+    /* Link color */
+    text-decoration: none;
+    /* No underline */
+}
+
+/* Responsive styles */
 @media (max-width: 768px) {
-    .nav-links {
-        position: absolute;
-        top: 60px;
-        right: 0;
-        height: 100vh;
-        width: 200px;
-        background-color: #333;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
+    .nav-right {
         display: none;
+        /* Hide links by default */
+        flex-direction: column;
+        /* Stack links vertically */
+        width: 100%;
+        /* Full width for mobile */
     }
 
-    .nav-links.active {
+    .nav-right.active {
         display: flex;
+        /* Show links when active */
     }
 
-    .burger {
+    .hamburger {
         display: block;
+        /* Show hamburger on mobile */
+    }
+
+    .nav-left {
+        flex-grow: 0;
+        /* Do not grow on mobile */
+    }
+}
+
+/* Default hamburger button hidden on larger screens */
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+        /* Hide hamburger on desktop */
+    }
+
+    .nav-right {
+        display: flex;
+        /* Show links on desktop */
     }
 }
