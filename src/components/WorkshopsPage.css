@@ -1,0 +1,94 @@
+/* Overall body styling */
+body {
+    font-family: 'Helvetica Neue', sans-serif; 
+    background-color: #0d1b2a; /* Dark background */
+    color: #e0e6ed; /* Light text color */
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/* Centered workshop list styling */
+.workshops-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.workshop-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.workshop-item {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #1b263b;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    background-color: #415a77; /* Darker card background */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+    font-size: 1rem;
+    transition: box-shadow 0.3s;
+    color: #ffffff; /* Brighter white for better contrast */
+}
+
+.workshop-item:hover {
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #29b6f6; /* Light blue matching the logo */
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #ffffff; /* Brighter text color inside cards */
+}
+
+.details {
+    margin-top: 10px;
+    text-align: left;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #f0f4f8; /* Lighter text color for paragraphs inside cards */
+}
+
+a {
+    text-decoration: none;
+    color: #29b6f6; /* Updated link color */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Ensure that all content is responsive */
+@media (max-width: 768px) {
+    .workshop-item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}

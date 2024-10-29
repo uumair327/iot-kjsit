@@ -4,6 +4,7 @@
     /* Offset top padding for fixed nav */
     max-width: 1200px;
     margin: 0 auto;
+    background-color: #282c34;
 }
 
 .projects-page h1 {
