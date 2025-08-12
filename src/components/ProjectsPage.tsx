@@ -7,13 +7,25 @@ const projects = [
         title: 'Smart Home Automation',
         description: 'A project on automating home appliances using IoT technology.',
         link: '#',
-        image: '/smart-home.jpg',
+        image: 'https://via.placeholder.com/300x200?text=Smart+Home',
     },
     {
         title: 'IoT Weather Monitoring System',
         description: 'A system to monitor and report weather using IoT sensors.',
         link: '#',
-        image: '/weather-monitor.jpg',
+        image: 'https://via.placeholder.com/300x200?text=Weather+Monitor',
+    },
+    {
+        title: 'Smart Agriculture System',
+        description: 'Monitor soil moisture, temperature, and humidity for optimal crop growth.',
+        link: '#',
+        image: 'https://via.placeholder.com/300x200?text=Smart+Agriculture',
+    },
+    {
+        title: 'IoT Security Camera',
+        description: 'Real-time monitoring and alert system using IoT-enabled cameras.',
+        link: '#',
+        image: 'https://via.placeholder.com/300x200?text=Security+Camera',
     },
 ];
 

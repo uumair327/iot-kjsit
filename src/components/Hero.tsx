@@ -9,10 +9,10 @@ const Hero: React.FC = () => {
 
     // Carousel items
     const slides = [
-        'Slide 1',
-        'Slide 2',
-        'Slide 3',
-        'Slide 4',
+        'Innovation in IoT',
+        'Smart Solutions',
+        'Connected Future',
+        'Technology Excellence',
     ];
 
     // Function to handle mouse movement and calculate rotation

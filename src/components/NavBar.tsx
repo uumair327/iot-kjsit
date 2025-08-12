@@ -1,5 +1,4 @@
-import './Navbar.css';
-import IoTLogo from './IoT.png'; import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
 
@@ -12,14 +11,14 @@ const NavBar: React.FC = () => {
 
     return (
         <nav className="navbar">
-            <div className="logo">IoT Club</div>
+            <div className="logo">IoT Club KJSIT</div>
             <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/projects">Projects</Link></li>
                 <li><Link to="/workshops">Workshops</Link></li>
                 <li><Link to="/contact">Contact Us</Link></li>
             </ul>
-            <div className="burger" onClick={toggleNav}>
+            <div className={`burger ${isOpen ? 'active' : ''}`} onClick={toggleNav}>
                 <div></div>
                 <div></div>
                 <div></div>

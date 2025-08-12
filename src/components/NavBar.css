@@ -4,99 +4,89 @@
     align-items: center;
     padding: 10px 20px;
     background-color: #282c34;
-    /* Choose your background color */
     color: white;
-    /* Text color */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.nav-left,
-.nav-right {
-    display: flex;
-    align-items: center;
-}
-
-/* Logo image */
 .logo {
-    width: 40px;
-    /* Adjust size as needed */
-    height: auto;
-    /* Maintain aspect ratio */
-    margin-right: 10px;
-    /* Space between logo and hamburger */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #29b6f6;
 }
 
-.hamburger {
-    font-size: 24px;
-    /* Size of hamburger icon */
-    background: none;
-    /* Remove button background */
-    border: none;
-    /* Remove button border */
-    color: white;
-    /* Hamburger color */
-    cursor: pointer;
-    /* Pointer cursor on hover */
-}
-
-/* Center item for IOT */
-.nav-center {
-    flex-grow: 1;
-    /* Center item will grow */
-    text-align: center;
-    /* Center the text */
-}
-
-/* Right side links */
-.nav-right {
+.nav-links {
     display: flex;
-    gap: 20px;
-    /* Space between links */
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
 }
 
-/* Style for links */
-.nav-right a {
+.nav-links a {
     color: white;
-    /* Link color */
     text-decoration: none;
-    /* No underline */
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #29b6f6;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
-    .nav-right {
-        display: none;
-        /* Hide links by default */
-        flex-direction: column;
-        /* Stack links vertically */
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
         width: 100%;
-        /* Full width for mobile */
+        height: calc(100vh - 70px);
+        background-color: #282c34;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 50px;
+        transition: right 0.3s ease-in-out;
     }
 
-    .nav-right.active {
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .burger {
         display: flex;
-        /* Show links when active */
     }
 
-    .hamburger {
-        display: block;
-        /* Show hamburger on mobile */
+    .burger.active div:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
     }
 
-    .nav-left {
-        flex-grow: 0;
-        /* Do not grow on mobile */
-    }
-}
-
-/* Default hamburger button hidden on larger screens */
-@media (min-width: 769px) {
-    .hamburger {
-        display: none;
-        /* Hide hamburger on desktop */
+    .burger.active div:nth-child(2) {
+        opacity: 0;
     }
 
-    .nav-right {
-        display: flex;
-        /* Show links on desktop */
+    .burger.active div:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
     }
 }

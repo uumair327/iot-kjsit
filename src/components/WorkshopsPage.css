@@ -73,6 +73,29 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Register button styling */
+.register-button {
+    background-color: #29b6f6;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.register-button:hover {
+    background-color: #1e88e5;
+    transform: translateY(-2px);
+}
+
+.register-button:active {
+    transform: translateY(0);
+}
+
 /* Ensure that all content is responsive */
 @media (max-width: 768px) {
     .workshop-item {
@@ -90,5 +113,10 @@ a:hover {
 
     p {
         font-size: 0.9rem;
+    }
+
+    .register-button {
+        width: 100%;
+        padding: 14px;
     }
 }
